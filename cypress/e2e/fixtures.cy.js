@@ -20,6 +20,7 @@ describe('SauceDemo', ()=>{
 
     beforeEach('Inicie la página', ()=>{
         cy.visit('https://www.saucedemo.com/')
+        
     })
 
     it(" Login Locked User", ()=>{
@@ -38,7 +39,7 @@ describe('SauceDemo', ()=>{
         })
     })
 
-    it.only('Login user correcto', ()=>{
+    it('Login user correcto', ()=>{
         usersOk.forEach(dato =>{
             cy.get('[data-test="username"]').type(dato.username)
             cy.get('[data-test="password"]').type(dato.password)
