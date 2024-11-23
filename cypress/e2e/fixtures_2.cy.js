@@ -27,7 +27,7 @@ describe('SauceDemo.com',()=>{
         cy.get('[data-test="login-button"]').click()
         cy.get('[data-test="error"]').should('have.text','Epic sadface: Username and password do not match any user in this service')
 })
-    it.only('Login user correcto', function(){
+    it('Login user correcto', function(){
             cy.get('[data-test="username"]').type(this.dato.standardUser)
             cy.get('[data-test="password"]').type(this.dato.passwordOk)
             cy.get('[data-test="login-button"]').click()
